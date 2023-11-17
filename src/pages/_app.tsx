@@ -3,6 +3,7 @@ import '../assets/styles.css'
 import { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
 import { PreviewAlert } from '../components/PreviewAlert'
+import { Analytics } from '@vercel/analytics/react';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
@@ -28,6 +29,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
     />
     {pageProps.preview && <PreviewAlert />}
     <Component {...pageProps} />
+    <Analytics />
   </>
 )
 
