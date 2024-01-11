@@ -71,6 +71,17 @@ const StructureListItem = ({
           </LinkToCoordinate>
         </p>
       )}
+    {/* test display */}
+    {true 
+      && (
+        <p>
+          <LinkToCoordinate selected={selected!} href={"https://www.google.com"}>
+            <AtSymbolIcon className="h-4 w-4" /> {"https://www.google.com"}
+          </LinkToCoordinate>
+        </p>
+      )}
+    {/* end test display */}
+
     {selected && <XIcon className="absolute top-1 right-2 h-5 w-5 text-gray-300 group-hover:text-blue-default" />}
   </div>
 )
